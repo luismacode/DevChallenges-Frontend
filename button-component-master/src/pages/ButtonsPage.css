@@ -1,0 +1,35 @@
+.header {
+	width: 98%;
+	max-width: 1400px;
+	margin: auto;
+	padding-top: 3em;
+}
+.header__title,
+.main__title {
+	font-family: 'Poppins', sans-serif;
+}
+.header__title {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 1.3rem;
+	background: linear-gradient(90deg, hsl(22, 84%, 42%) 20%, hsl(0, 0%, 6%) 21%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main__inner {
+	width: 60%;
+	max-width: 1400px;
+}
+.main__title {
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 36px;
+	color: hsl(0, 0%, 31%);
+	margin-bottom: 2em;
+}

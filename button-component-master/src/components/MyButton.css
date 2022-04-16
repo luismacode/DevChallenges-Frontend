@@ -1,0 +1,55 @@
+.button {
+	outline: none;
+	border: none;
+	display: block;
+	width: 81px;
+	height: 36px;
+	border-radius: 6px;
+	background-color: hsl(0, 0%, 88%);
+	box-shadow: 0px 2px 3px 0px #33333333;
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 20px;
+	text-align: center;
+	color: hsl(0, 0%, 25%);
+	margin-bottom: 3em;
+}
+.buttonOutline {
+	outline: 1px solid hsl(231, 99%, 62%);
+	color: hsl(231, 99%, 62%);
+	background-color: hsl(0, 0%, 100%);
+}
+.buttonText {
+	background-color: transparent;
+	box-shadow: none;
+	color: hsl(231, 99%, 62%);
+	text-align: left;
+}
+.buttonShadowDisabled {
+	box-shadow: none;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(231, 99%, 62%);
+}
+.buttonDisabled {
+	background-color: hsl(0, 0%, 88%);
+	color: hsl(0, 0%, 62%);
+}
+.buttonTextDisabled {
+	background-color: transparent;
+}
+@media (hover: hover) {
+	.button:hover {
+		cursor: pointer;
+		background-color: hsl(0, 0%, 68%);
+	}
+	.buttonOutline:hover {
+		background-color: hsla(224, 100%, 58%, 0.102);
+	}
+	.buttonText:hover {
+		background: hsla(224, 100%, 58%, 0.102);
+		text-align: center;
+	}
+	.buttonShadowDisabled:hover {
+		background-color: hsl(232, 85%, 27%);
+	}
+}

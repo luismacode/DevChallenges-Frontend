@@ -1,14 +1,17 @@
+<template>
+	<header class="header">
+		<h1 class="header__title">Devchallenges.io</h1>
+	</header>
+</template>
+<style scoped>
 .header {
 	width: 98%;
 	max-width: 1400px;
 	margin: auto;
 	padding-top: 3em;
 }
-.header__title,
-.main__title {
-	font-family: 'Poppins', sans-serif;
-}
 .header__title {
+	font-family: 'Poppins', sans-serif;
 	display: inline-block;
 	font-weight: 600;
 	font-size: 1.3rem;
@@ -17,19 +20,4 @@
 	-webkit-background-clip: text;
 	color: transparent;
 }
-.main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.main__inner {
-	width: 60%;
-	max-width: 1400px;
-}
-.main__title {
-	font-size: 2.4rem;
-	font-weight: 500;
-	line-height: 36px;
-	color: hsl(0, 0%, 31%);
-	margin-bottom: 2em;
-}
+</style>

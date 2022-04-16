@@ -1,7 +1,7 @@
 <script setup>
-import ButtonsPage from './pages/ButtonsPage.vue'
+import MainPage from './pages/MainPage.vue'
 </script>
 
 <template>
-	<buttons-page />
+	<main-page />
 </template>

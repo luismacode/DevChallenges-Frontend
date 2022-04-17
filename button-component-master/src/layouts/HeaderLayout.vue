@@ -7,8 +7,10 @@
 .header {
 	width: 98%;
 	max-width: 1400px;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 3em;
+	padding-bottom: 3em;
 }
 .header__title {
 	font-family: 'Poppins', sans-serif;

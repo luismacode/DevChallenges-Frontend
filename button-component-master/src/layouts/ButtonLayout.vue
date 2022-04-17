@@ -1,10 +1,59 @@
 <template>
-	<my-button />
-	<my-button variant="outline" />
-	<my-button variant="text" />
-	<my-button disable-shadow />
-	<my-button disabled />
-	<my-button disabled variant="text" />
+	<div class="row">
+		<my-button>Default</my-button>
+	</div>
+	<div class="row">
+		<div class="column">
+			<my-button variant="outline">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button variant="text">Default</my-button>
+		</div>
+	</div>
+	<div class="row">
+		<my-button disable-shadow>Default</my-button>
+	</div>
+	<div class="row">
+		<div class="column">
+			<my-button disabled>Disabled</my-button>
+		</div>
+		<div class="column">
+			<my-button disabled variant="text">Disabled</my-button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<my-button start-icon="local_grocery_store">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button end-icon="local_grocery_store">Default</my-button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<my-button size="sm">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button size="md">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button size="lg">Default</my-button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<my-button color="default">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button color="primary">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button color="secondary">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button color="danger">Default</my-button>
+		</div>
+	</div>
 </template>
 <script>
 import MyButton from '@/components/MyButton.vue'
@@ -14,3 +63,13 @@ export default {
 	}
 }
 </script>
+<style scoped>
+.row {
+	display: flex;
+	margin-bottom: 3em;
+	align-items: center;
+}
+.column {
+	margin-right: 3em;
+}
+</style>

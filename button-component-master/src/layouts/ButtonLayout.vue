@@ -28,6 +28,24 @@
 		<div class="column">
 			<my-button end-icon="local_grocery_store">Default</my-button>
 		</div>
+		<div class="column">
+			<my-button start-icon="arrow_circle_left">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button end-icon="arrow_circle_right">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button start-icon="phone">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button end-icon="send">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button start-icon="local_shipping">Default</my-button>
+		</div>
+		<div class="column">
+			<my-button end-icon="download">Default</my-button>
+		</div>
 	</div>
 	<div class="row">
 		<div class="column">
@@ -66,8 +84,10 @@ export default {
 <style scoped>
 .row {
 	display: flex;
-	margin-bottom: 3em;
+	margin-bottom: 4em;
+	gap: 1em;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .column {
 	margin-right: 3em;

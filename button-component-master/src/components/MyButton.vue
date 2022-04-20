@@ -19,9 +19,9 @@
 			}
 		]"
 	>
-		<span v-if="startIcon" class="material-icons">{{ startIcon }}</span>
+		<span v-if="startIcon" class="material-icons md-18">{{ startIcon }}</span>
 		<slot></slot>
-		<span v-if="endIcon" class="material-icons">{{ endIcon }}</span>
+		<span v-if="endIcon" class="material-icons md-18">{{ endIcon }}</span>
 	</button>
 </template>
 <script>

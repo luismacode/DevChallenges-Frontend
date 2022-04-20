@@ -1,98 +1,105 @@
+:root {
+	--color: hsl(0, 0%, 25%);
+	--bg-color: hsl(0, 0%, 88%);
+	--text-align: center;
+	--width: 81px;
+	--height: 36px;
+}
+
 .button {
-	outline: none;
 	border: none;
-	display: block;
-	width: 81px;
-	height: 36px;
+	display: inline-block;
+	width: var(--width);
+	height: var(--height);
 	border-radius: 6px;
-	background-color: hsl(0, 0%, 88%);
+	background-color: var(--bg-color);
 	box-shadow: 0px 2px 3px 0px #33333333;
 	font-size: 1.4rem;
 	font-weight: 500;
 	line-height: 20px;
-	text-align: center;
-	color: hsl(0, 0%, 25%);
+	text-align: var(--text-align);
+	color: var(--color);
 }
 .buttonOutline {
 	outline: 1px solid hsl(231, 99%, 62%);
-	color: hsl(231, 99%, 62%);
-	background-color: hsl(0, 0%, 100%);
+	--color: hsl(231, 99%, 62%);
+	--bg-color: hsl(0, 0%, 100%);
 }
 .buttonText {
-	background-color: transparent;
+	--bg-color: transparent;
 	box-shadow: none;
-	color: hsl(231, 99%, 62%);
-	text-align: left;
+	--color: hsl(231, 99%, 62%);
+	--text-align: left;
 }
 .buttonShadowDisabled {
 	box-shadow: none;
-	color: hsl(0, 0%, 100%);
-	background-color: hsl(231, 99%, 62%);
+	--color: hsl(0, 0%, 100%);
+	--bg-color: hsl(231, 99%, 62%);
 }
 .buttonDisabled {
-	background-color: hsl(0, 0%, 88%);
-	color: hsl(0, 0%, 62%);
+	--bg-color: hsl(0, 0%, 88%);
+	--color: hsl(0, 0%, 62%);
 }
 .buttonTextDisabled {
-	background-color: transparent;
+	--bg-color: transparent;
 }
 .buttonIcons {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	width: 105px;
-	background-color: hsl(224, 100%, 58%);
-	color: white;
+	--width: 105px;
+	--bg-color: hsl(224, 100%, 58%);
+	--color: white;
 }
 .buttonSm {
-	width: 73px;
-	height: 32px;
+	--width: 73px;
+	--height: 32px;
 }
 .buttonMd {
-	width: 81px;
-	height: 36px;
+	--width: 81px;
+	--height: 36px;
 }
 .buttonLg {
-	width: 93px;
-	height: 42px;
+	--width: 93px;
+	--height: 42px;
 }
 .buttonPrimary {
-	background-color: hsl(224, 100%, 58%);
-	color: white;
+	--bg-color: hsl(224, 100%, 58%);
+	--color: white;
 }
 .buttonSecondary {
-	background-color: hsl(199, 18%, 33%);
-	color: white;
+	--bg-color: hsl(199, 18%, 33%);
+	--color: white;
 }
 .buttonDanger {
-	background-color: hsl(0, 65%, 51%);
-	color: white;
+	--bg-color: hsl(0, 65%, 51%);
+	--color: white;
 }
 @media (hover: hover) {
 	.button:hover {
 		cursor: pointer;
-		background-color: hsl(0, 0%, 68%);
+		--bg-color: hsl(0, 0%, 68%);
 	}
 	.buttonOutline:hover {
-		background-color: hsla(224, 100%, 58%, 0.102);
+		--bg-color: hsla(224, 100%, 58%, 0.102);
 	}
 	.buttonText:hover {
-		background: hsla(224, 100%, 58%, 0.102);
-		text-align: center;
+		--bg-color: hsla(224, 100%, 58%, 0.102);
+		--text-align: center;
 	}
 	.buttonShadowDisabled:hover {
-		background-color: hsl(223, 100%, 40%);
+		--bg-color: hsl(223, 100%, 40%);
 	}
 	.buttonIcons:hover {
-		background-color: hsl(223, 100%, 40%);
+		--bg-color: hsl(223, 100%, 40%);
 	}
 	.buttonPrimary:hover {
-		background-color: hsl(223, 100%, 40%);
+		--bg-color: hsl(223, 100%, 40%);
 	}
 	.buttonSecondary:hover {
-		background-color: hsl(198, 35%, 17%);
+		--bg-color: hsl(198, 35%, 17%);
 	}
 	.buttonDanger:hover {
-		background-color: hsl(357, 100%, 30%);
+		--bg-color: hsl(357, 100%, 30%);
 	}
 }

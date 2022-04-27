@@ -1,55 +1,28 @@
 :root {
-	--color: hsl(0, 0%, 25%);
+	--color: hsla(0, 0%, 25%, 1);
+	--variant-color: hsl(0, 0%, 57%);
 	--bg-color: hsl(0, 0%, 88%);
-	--text-align: center;
+	--bg-variant-hover: hsl(0, 6%, 90%);
 	--width: 81px;
 	--height: 36px;
+	--box-shadow: 0px 2px 3px 0px #33333333;
 }
 
 .button {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Noto Sans JP', sans-serif;
 	border: none;
-	display: inline-block;
 	width: var(--width);
 	height: var(--height);
 	border-radius: 6px;
 	background-color: var(--bg-color);
-	box-shadow: 0px 2px 3px 0px #33333333;
+	box-shadow: var(--box-shadow);
 	font-size: 1.4rem;
 	font-weight: 500;
 	line-height: 20px;
-	text-align: var(--text-align);
 	color: var(--color);
-}
-.buttonOutline {
-	outline: 1px solid hsl(231, 99%, 62%);
-	--color: hsl(231, 99%, 62%);
-	--bg-color: hsl(0, 0%, 100%);
-}
-.buttonText {
-	--bg-color: transparent;
-	box-shadow: none;
-	--color: hsl(231, 99%, 62%);
-	--text-align: left;
-}
-.buttonShadowDisabled {
-	box-shadow: none;
-	--color: hsl(0, 0%, 100%);
-	--bg-color: hsl(231, 99%, 62%);
-}
-.buttonDisabled {
-	--bg-color: hsl(0, 0%, 88%);
-	--color: hsl(0, 0%, 62%);
-}
-.buttonTextDisabled {
-	--bg-color: transparent;
-}
-.buttonIcons {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	--width: 105px;
-	--bg-color: hsl(224, 100%, 58%);
-	--color: white;
 }
 .buttonSm {
 	--width: 73px;
@@ -75,23 +48,49 @@
 	--bg-color: hsl(0, 65%, 51%);
 	--color: white;
 }
+.outlinedButton {
+	--bg-color: transparent;
+	outline: 1px solid var(--variant-color);
+	color: var(--variant-color);
+}
+.textButton {
+	--bg-color: transparent;
+	--box-shadow: none;
+	color: var(--variant-color);
+}
+
+.outlinedPrimaryButton,
+.textPrimaryButton {
+	--variant-color: hsla(231, 99%, 62%, 1);
+}
+.outlinedSecondaryButton,
+.textSecondaryButton {
+	--variant-color: hsla(202, 11%, 34%, 1);
+}
+.outlinedDangerButton,
+.textDangerButton {
+	--variant-color: hsla(0, 62%, 55%, 1);
+}
+.buttonIcons {
+	--width: 105px;
+}
+
+.buttonShadowDisabled {
+	--box-shadow: none;
+}
+.buttonDisabled {
+	--bg-color: hsl(0, 0%, 88%);
+	--color: hsl(0, 0%, 62%);
+	--box-shadow: none;
+}
+.buttonTextDisabled {
+	--bg-color: transparent;
+}
+
 @media (hover: hover) {
 	.button:hover {
 		cursor: pointer;
-		--bg-color: hsl(0, 0%, 68%);
-	}
-	.buttonOutline:hover {
-		--bg-color: hsla(224, 100%, 58%, 0.102);
-	}
-	.buttonText:hover {
-		--bg-color: hsla(224, 100%, 58%, 0.102);
-		--text-align: center;
-	}
-	.buttonShadowDisabled:hover {
-		--bg-color: hsl(223, 100%, 40%);
-	}
-	.buttonIcons:hover {
-		--bg-color: hsl(223, 100%, 40%);
+		--bg-color: hsla(0, 0%, 68%, 1);
 	}
 	.buttonPrimary:hover {
 		--bg-color: hsl(223, 100%, 40%);
@@ -101,5 +100,24 @@
 	}
 	.buttonDanger:hover {
 		--bg-color: hsl(357, 100%, 30%);
+	}
+	.outlinedButton:hover,
+	.textButton:hover {
+		background-color: var(--bg-variant-hover);
+	}
+	.outlinedPrimaryButton:hover,
+	.textPrimaryButton:hover {
+		--bg-variant-hover: hsla(224, 100%, 58%, 0.1);
+	}
+	.outlinedSecondaryButton:hover,
+	.textSecondaryButton:hover {
+		--bg-variant-hover: hsla(200, 13%, 35%, 0.1);
+	}
+	.outlinedDangerButton:hover,
+	.textDangerButton:hover {
+		--bg-variant-hover: hsla(0, 62%, 55%, 0.1);
+	}
+	.buttonDisabled:hover {
+		--bg-color: hsl(0, 0%, 88%);
 	}
 }

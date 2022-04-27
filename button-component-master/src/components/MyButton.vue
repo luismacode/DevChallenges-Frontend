@@ -4,8 +4,16 @@
 		:class="[
 			css.button,
 			{
-				[css.buttonOutline]: variant === 'outline',
-				[css.buttonText]: variant === 'text',
+				[css.outlinedButton]: variant === 'outline',
+				[css.outlinedPrimaryButton]:
+					variant === 'outline' && color === 'primary',
+				[css.outlinedSecondaryButton]:
+					variant === 'outline' && color === 'secondary',
+				[css.outlinedDangerButton]: variant === 'outline' && color === 'danger',
+				[css.textButton]: variant === 'text',
+				[css.textPrimaryButton]: variant === 'text' && color === 'primary',
+				[css.textSecondaryButton]: variant === 'text' && color === 'secondary',
+				[css.textDangerButton]: variant === 'text' && color === 'danger',
 				[css.buttonShadowDisabled]: disableShadow,
 				[css.buttonDisabled]: disabled,
 				[css.buttonTextDisabled]: disabled && variant == 'text',

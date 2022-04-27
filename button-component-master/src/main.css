@@ -6,7 +6,6 @@ html {
 body {
 	margin: 0;
 	background-color: hsla(0, 0%, 95%, 0.8);
-	font-family: 'Noto Sans JP', sans-serif;
 }
 .material-icons.md-18 {
 	font-size: 18px;

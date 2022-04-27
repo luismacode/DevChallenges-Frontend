@@ -4,10 +4,10 @@
 	</div>
 	<div class="row">
 		<div class="column">
-			<my-button variant="outline">Default</my-button>
+			<my-button variant="outline" color="danger">Default</my-button>
 		</div>
 		<div class="column">
-			<my-button variant="text">Default</my-button>
+			<my-button variant="text" color="primary">Default</my-button>
 		</div>
 	</div>
 	<div class="row">
@@ -18,18 +18,24 @@
 			<my-button disabled>Disabled</my-button>
 		</div>
 		<div class="column">
-			<my-button disabled variant="text">Disabled</my-button>
+			<my-button variant="text" disabled>Disabled</my-button>
 		</div>
 	</div>
 	<div class="row">
 		<div class="column">
-			<my-button start-icon="local_grocery_store">Default</my-button>
+			<my-button color="danger" start-icon="local_grocery_store"
+				>Default</my-button
+			>
 		</div>
 		<div class="column">
-			<my-button end-icon="local_grocery_store">Default</my-button>
+			<my-button color="primary" end-icon="local_grocery_store"
+				>Default</my-button
+			>
 		</div>
 		<div class="column">
-			<my-button start-icon="arrow_circle_left">Default</my-button>
+			<my-button color="secondary" start-icon="arrow_circle_left"
+				>Default</my-button
+			>
 		</div>
 		<div class="column">
 			<my-button end-icon="arrow_circle_right">Default</my-button>
@@ -60,7 +66,7 @@
 	</div>
 	<div class="row">
 		<div class="column">
-			<my-button color="default">Default</my-button>
+			<my-button>Default</my-button>
 		</div>
 		<div class="column">
 			<my-button color="primary">Default</my-button>

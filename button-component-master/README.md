@@ -46,7 +46,9 @@
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build an application to complete the given user stories.
 
 ## How To Use
-Use [vnc](https://subversion.apache.org/packages.html) to download the directory
+
+Use [svn](https://subversion.apache.org/packages.html) to download the directory
+
 ```bash
 svn checkout https://github.com/luismac09/DevChallenges-Frontend/trunk/button-component-master
 ```
@@ -54,10 +56,12 @@ svn checkout https://github.com/luismac09/DevChallenges-Frontend/trunk/button-co
 Finished download ,use [pnpm](https://pnpm.io/installation) an efficient package manager .Then install [nodejs](https://pnpm.io/cli/env) with pnpm.
 
 After run the following commands in your project directory.
+
 ```bash
 pnpm install
 pnpm dev
 ```
+
 ## Acknowledgements
 
 - [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)

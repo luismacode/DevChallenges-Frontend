@@ -47,7 +47,7 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## How To Use
 
-Use [vnc](https://subversion.apache.org/packages.html) to download the directory
+Use [svn](https://subversion.apache.org/packages.html) to download the directory
 
 ```bash
 svn checkout https://github.com/luismac09/DevChallenges-Frontend/trunk/input-component-master

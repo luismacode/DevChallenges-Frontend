@@ -1,4 +1,3 @@
-
 <h1 align="center">input-component-master</h1>
 
 <div align="center">
@@ -47,7 +46,9 @@
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp) was to build an application to complete the given user stories.
 
 ## How To Use
+
 Use [vnc](https://subversion.apache.org/packages.html) to download the directory
+
 ```bash
 svn checkout https://github.com/luismac09/DevChallenges-Frontend/trunk/input-component-master
 ```
@@ -55,6 +56,7 @@ svn checkout https://github.com/luismac09/DevChallenges-Frontend/trunk/input-com
 Finished download ,use [pnpm](https://pnpm.io/installation) an efficient package manager .Then install [nodejs](https://pnpm.io/cli/env) with pnpm.
 
 After run the following commands in your project directory.
+
 ```bash
 pnpm install
 pnpm dev

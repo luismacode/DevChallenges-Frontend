@@ -1,14 +1,7 @@
 <script setup>
-
+import MainPage from './pages/MainPage.vue'
 </script>
 
 <template>
-    <h1>Hello World</h1>
+	<main-page />
 </template>
-
-<style>
-    .h1{
-        text-transform: uppercase;
-        color:aqua
-    }
-</style>

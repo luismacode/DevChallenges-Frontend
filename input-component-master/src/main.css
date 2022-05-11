@@ -1,0 +1,15 @@
+html {
+	font-size: 10px;
+}
+@font-face {
+	font-family: 'Poppins';
+	src: url(./assets/fonts/Poppins-Medium.woff) format('woff'),
+		url(./assets/fonts/Poppins-SemiBold.woff) format('woff'),
+		url(./assets/fonts/Poppins-Medium.ttf) format('ttf'),
+		url(./assets/fonts/Poppins-SemiBold.ttf) format('ttf');
+	font-display: swap;
+}
+body {
+	margin: 0;
+	background-color: hsla(0, 0%, 95%, 0.8);
+}

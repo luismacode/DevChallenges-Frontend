@@ -58,6 +58,7 @@ Finished download ,use [pnpm](https://pnpm.io/installation) an efficient package
 After run the following commands in your project directory.
 
 ```bash
+cd ./input-component-master
 pnpm install
 pnpm dev
 ```

@@ -1,7 +1,9 @@
 <template>
 	<main class="wrapper">
 		<div class="column-20">
-			<slot name="logo"></slot>
+			<div class="logo-container">
+				<slot name="logo"></slot>
+			</div>
 		</div>
 		<div class="column-60">
 			<slot name="title"></slot>
@@ -11,23 +13,23 @@
 </template>
 <style scoped>
 .wrapper {
-	width: 96%;
 	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 1em;
+	margin-left: 2em;
+	padding: 5em 0 0 4em;
+}
+.logo-container {
+	width: 120px;
 }
 @media screen and (min-width: 576px) {
 	.wrapper {
-		width: 100%;
 		display: flex;
-		gap: 2em;
+		gap: 5em;
 	}
 	.column-20 {
-		flex-basis: 20%;
+		flex-basis: 10%;
 	}
 	.column-80 {
-		flex-basis: 80%;
+		flex-basis: 90%;
 	}
 }
 </style>

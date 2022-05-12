@@ -9,6 +9,12 @@ html {
 		url(./assets/fonts/Poppins-SemiBold.ttf) format('ttf');
 	font-display: swap;
 }
+@font-face {
+	font-family: 'NotoSansJP';
+	src: url(./assets/fonts/NotoSansJP-Medium.otf) format('otf'),
+		url(./assets/fonts/NotoSansJP-Regular.otf) format('otf');
+	font-display: swap;
+}
 body {
 	margin: 0;
 	background-color: hsla(0, 0%, 95%, 0.8);

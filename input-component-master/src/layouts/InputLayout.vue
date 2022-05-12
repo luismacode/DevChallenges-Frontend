@@ -1,14 +1,15 @@
 <script setup>
 import MyInput from '../components/MyInput.vue'
+import MyLabel from '../components/MyLabel.vue'
 </script>
 <template>
-	<div class="input-layout">
+	<div class="row">
+		<my-label />
 		<my-input />
 	</div>
 </template>
 <style scoped>
-.input-layout {
-	display: flex;
-	flex-wrap: wrap;
+.row {
+	margin-bottom: 2em;
 }
 </style>

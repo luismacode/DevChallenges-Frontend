@@ -15,7 +15,17 @@ html {
 		url(./assets/fonts/NotoSansJP-Regular.otf) format('otf');
 	font-display: swap;
 }
+@font-face {
+	font-family: 'Montserrat';
+	src: url(./assets/fonts/Montserrat-Medium.ttf) format('ttf'),
+		url(./assets/fonts/Montserrat-Bold.ttf) format('ttf');
+	font-display: swap;
+}
 body {
 	margin: 0;
 	background-color: hsla(0, 0%, 95%, 0.8);
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 40;
 }

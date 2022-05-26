@@ -8,6 +8,7 @@
 		<div class="column-60">
 			<slot name="title"></slot>
 			<slot name="body"></slot>
+			<slot name="footer"></slot>
 		</div>
 	</main>
 </template>

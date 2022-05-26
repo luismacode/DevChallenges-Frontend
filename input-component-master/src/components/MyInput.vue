@@ -1,10 +1,26 @@
 <template>
-	<input
-		id="text"
-		:class="{ inputError: error, inputDisabled: disabled }"
-		type="text"
-		placeholder="Placeholder"
-	/>
+	<div class="container">
+		<span v-if="startIcon" class="material-symbols-outlined icon icon-left">
+			call
+		</span>
+		<input
+			v-if="!multiline"
+			id="text"
+			:class="{
+				inputError: error,
+				inputDisabled: disabled,
+				inputSizeSm: size === 'sm',
+				inputSizeMd: size === 'md',
+				fullWidth: fullWidth
+			}"
+			type="text"
+			:placeholder="value"
+		/>
+		<span v-if="endIcon" class="material-symbols-outlined icon icon-right">
+			lock
+		</span>
+		<textarea v-if="multiline" :rows="row * 2" placeholder="Placeholder" />
+	</div>
 	<span
 		v-if="helperText"
 		class="helperText"
@@ -26,30 +42,88 @@ export default {
 		disabled: {
 			type: Boolean,
 			default: false
+		},
+		startIcon: {
+			type: Boolean,
+			default: false
+		},
+		endIcon: {
+			type: Boolean,
+			default: false
+		},
+		value: {
+			type: String,
+			default: 'Placeholder'
+		},
+		size: {
+			type: String,
+			default: 'md',
+			validator(value) {
+				return ['sm', 'md'].indexOf(value) > -1
+			}
+		},
+		fullWidth: {
+			type: Boolean,
+			default: false
+		},
+		multiline: {
+			type: Boolean,
+			default: false
+		},
+		row: {
+			type: String,
+			default: null
 		}
 	}
-	// data() {
-	// 	return {
-	// 		hasText
-	// 	}
-	// }
 }
 </script>
 <style scoped>
 ::placeholder {
 	color: hsl(0, 0%, 51%);
 }
-input {
-	display: block;
-	width: 200px;
-	height: 56px;
+input,
+textarea {
 	font-size: 1.4rem;
 	font-family: 'NotoSansJP', sans-serif;
 	font-weight: 500;
 	border-radius: 12px;
+}
+input {
+	display: block;
+	width: 200px;
 	outline: none;
 	border: 1px solid #828282;
 	padding-left: 1em;
+}
+textarea {
+	padding: 1em;
+}
+.fullWidth {
+	width: 100%;
+}
+.inputSizeSm {
+	height: 40px;
+}
+.inputSizeMd {
+	height: 56px;
+}
+.container {
+	position: relative;
+}
+.icon {
+	position: absolute;
+	color: #828282;
+}
+.icon-left {
+	left: 0.2em;
+	top: 0.7em;
+}
+.icon-left + input::placeholder {
+	padding-left: 1.5em;
+}
+.icon-right {
+	right: 0.2em;
+	top: 0.7em;
 }
 .helperText {
 	display: inline-block;
@@ -61,9 +135,7 @@ input {
 .helperTextError {
 	color: hsl(0, 65%, 51%);
 }
-.inputError {
-	border-color: hsl(0, 65%, 51%);
-}
+.inputError,
 .inputError:focus {
 	border-color: hsl(0, 65%, 51%);
 }
@@ -78,12 +150,16 @@ input:focus {
 	border-color: none;
 }
 @media (hover: hover) {
-	input:hover {
+	input:hover,
+	textarea:hover {
 		border-color: hsl(0, 0%, 20%);
 	}
 	.inputDisabled:hover {
 		border-color: hsl(0, 0%, 88%);
 		cursor: no-drop;
+	}
+	.inputError:hover {
+		border-color: hsl(0, 51%, 64%);
 	}
 }
 </style>

@@ -25,6 +25,38 @@ import MyLabel from '../components/MyLabel.vue'
 			<my-input helper-text="some interesting text" error />
 		</div>
 	</div>
+	<div class="row flex">
+		<div class="field">
+			<my-label />
+			<my-input start-icon />
+		</div>
+		<div class="field">
+			<my-label />
+			<my-input end-icon />
+		</div>
+	</div>
+	<div class="row">
+		<my-label />
+		<my-input value="Text" />
+	</div>
+	<div class="row flex">
+		<div class="field">
+			<my-label />
+			<my-input size="sm" />
+		</div>
+		<div class="field">
+			<my-label />
+			<my-input size="md" />
+		</div>
+	</div>
+	<div class="row">
+		<my-label />
+		<my-input full-width />
+	</div>
+	<div class="row">
+		<my-label />
+		<my-input multiline row="4" />
+	</div>
 </template>
 <style scoped>
 .row {

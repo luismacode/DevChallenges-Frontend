@@ -14,7 +14,7 @@ dist-ssr
 *.local
 .eslint*
 .prettier*
-
+.netlify
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

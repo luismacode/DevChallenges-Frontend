@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<span v-if="startIcon" class="material-symbols-outlined icon icon-left">
-			call
+			<slot></slot>
 		</span>
 		<input
 			v-if="!multiline"
@@ -17,7 +17,7 @@
 			:placeholder="value"
 		/>
 		<span v-if="endIcon" class="material-symbols-outlined icon icon-right">
-			lock
+			<slot></slot>
 		</span>
 		<textarea v-if="multiline" :rows="row * 2" placeholder="Placeholder" />
 	</div>

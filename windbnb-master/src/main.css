@@ -1,0 +1,12 @@
+html {
+	font-size: 10px;
+}
+@font-face {
+	font-family: 'Mulish';
+	src: url(./assets/fonts/Mulish.ttf) format('ttf');
+	font-display: swap;
+}
+body {
+	margin: 0;
+	background-color: #ffffff;
+}

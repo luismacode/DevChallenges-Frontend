@@ -8,7 +8,7 @@
 				placeholder="Helsinki, Finland"
 			/>
 			<span class="search-text">Add guests</span>
-			<button type="button" class="button">
+			<button type="button" class="button" @click="doSearch">
 				<img
 					class="search-icon"
 					src="../assets/icons/search.svg"
@@ -18,6 +18,15 @@
 		</label>
 	</form>
 </template>
+<script>
+export default {
+	methods: {
+		doSearch() {
+			console.log('searching....')
+		}
+	}
+}
+</script>
 <style scoped>
 form {
 	width: 100%;

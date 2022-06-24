@@ -1,8 +1,10 @@
 <script setup>
-import SearchBar from '@/components/SearchBar.vue'
-import WindbnbLogo from '@/components/WindbnbLogo.vue'
+import BusinessLogo from '../components/BusinessLogo.vue'
+import SearchBar from '../components/SearchBar.vue'
+import StayGallery from '../components/StayGallery.vue'
 </script>
 <template>
-	<windbnb-logo />
+	<business-logo />
 	<search-bar />
+	<stay-gallery />
 </template>

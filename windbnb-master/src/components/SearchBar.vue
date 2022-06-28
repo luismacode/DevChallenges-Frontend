@@ -8,7 +8,7 @@
 				placeholder="Helsinki, Finland"
 			/>
 			<span class="search-text">Add guests</span>
-			<button type="button" class="button" @click="doSearch">
+			<button type="button" class="button" @click="openWindow">
 				<img
 					class="search-icon"
 					src="../assets/icons/search.svg"
@@ -17,12 +17,23 @@
 			</button>
 		</label>
 	</form>
+	<search-edition v-if="canEdit" :edit="canEdit" />
 </template>
 <script>
+import SearchEdition from './SearchEdition.vue'
 export default {
+	components: {
+		SearchEdition
+	},
+	data() {
+		return {
+			canEdit: false
+		}
+	},
 	methods: {
-		doSearch() {
-			console.log('searching....')
+		openWindow() {
+			console.log('abrir ventana de edicion de busqueda')
+			this.canEdit = true
 		}
 	}
 }

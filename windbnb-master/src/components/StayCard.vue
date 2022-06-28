@@ -25,6 +25,7 @@ const stayList = computed(() => {
 <style scoped>
 .card {
 	width: calc(100% - 2rem);
+	max-width: 360px;
 	margin-left: auto;
 	margin-left: auto;
 	margin-left: 0;
@@ -34,6 +35,7 @@ const stayList = computed(() => {
 	width: 100%;
 	height: 240px;
 	object-fit: cover;
+	border-radius: 24px;
 }
 .inner {
 	display: flex;

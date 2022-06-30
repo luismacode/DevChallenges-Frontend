@@ -1,23 +1,22 @@
 <template>
-	<form>
-		<label class="label" for="search">
-			<input
-				id="search"
-				class="search"
-				type="search"
-				placeholder="Helsinki, Finland"
-			/>
-			<span class="search-text">Add guests</span>
-			<button type="button" class="button" @click="openWindow">
+	<div class="wrapper">
+		<div class="inner">
+			<div class="content">
+				<span class="search-place">Helsinki, Finland</span>
+				<span class="search-guest">Add guests</span>
+			</div>
+			<button type="button" class="button" @click.prevent="isOpen = true">
 				<img
 					class="search-icon"
 					src="../assets/icons/search.svg"
 					alt="search icon"
 				/>
 			</button>
-		</label>
-	</form>
-	<search-edition v-if="canEdit" :edit="canEdit" />
+		</div>
+	</div>
+	<div v-if="isOpen" v-bind="isOpen">
+		<search-edition @close="closeEdition(cerrar)" />
+	</div>
 </template>
 <script>
 import SearchEdition from './SearchEdition.vue'
@@ -27,54 +26,51 @@ export default {
 	},
 	data() {
 		return {
-			canEdit: false
+			isOpen: false
 		}
 	},
 	methods: {
-		openWindow() {
-			console.log('abrir ventana de edicion de busqueda')
-			this.canEdit = true
+		closeEdition(cerrar) {
+			return (this.isOpen = cerrar)
 		}
 	}
 }
 </script>
 <style scoped>
-form {
+.wrapper {
 	width: 100%;
 	font-family: Mulish;
 }
-.label {
-	display: block;
-	width: 297px;
-	position: relative;
+.inner {
+	display: flex;
+	width: 298px;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 1rem;
+	box-shadow: 0px 1px 6px 0px hsla(0, 0%, 0%, 0.102);
+	height: 55px;
 }
-.search {
+.content {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.search-place {
 	font-size: 1.4rem;
 	font-weight: 400;
-	font-family: inherit;
-	border: none;
-	border-radius: 1rem;
-	width: 100%;
-	height: 55px;
-	box-shadow: 0px 1px 6px 0px hsla(0, 0%, 0%, 0.102);
 	padding-left: 1.3em;
 }
-.search-text {
-	top: 2rem;
-	right: 20%;
+.search-guest {
 	font-size: 1.4rem;
 	font-weight: 400;
 	color: #bdbdbd;
-	position: absolute;
 }
 .button {
-	top: 1.5rem;
-	right: 5%;
-	position: absolute;
+	width: 20%;
 	background-color: transparent;
 	border: none;
+	outline: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;

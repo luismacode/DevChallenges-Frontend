@@ -3,7 +3,13 @@
 		<div class="content">
 			<div class="header">
 				<h4 class="title">Edit your search</h4>
-				<img src="../assets/icons/close.svg" alt="close" class="icon-close" />
+				<button
+					type="button"
+					class="button-close"
+					@click="$emit('close', false)"
+				>
+					<img src="../assets/icons/close.svg" alt="close" class="icon-close" />
+				</button>
 			</div>
 			<form class="form">
 				<div class="field">
@@ -24,32 +30,8 @@
 					/>
 					<p class="text">Helsinki,Finland</p>
 				</li>
-				<li class="item">
-					<img
-						src="../assets/icons/place.svg"
-						alt="location"
-						class="icon-place"
-					/>
-					<p class="text">Turku,Finland</p>
-				</li>
-				<li class="item">
-					<img
-						src="../assets/icons/place.svg"
-						alt="location"
-						class="icon-place"
-					/>
-					<p class="text">Oulu,Finland</p>
-				</li>
-				<li class="item">
-					<img
-						src="../assets/icons/place.svg"
-						alt="location"
-						class="icon-place"
-					/>
-					<p class="text">Vaasa,Finland</p>
-				</li>
 			</ul>
-			<button type="button" class="button button-theme">
+			<button type="submit" class="button button-theme">
 				<img
 					src="../assets/icons/search-alt.svg"
 					class="icon-search"
@@ -61,7 +43,9 @@
 	</section>
 </template>
 <script>
-export default {}
+export default {
+	emits: ['close']
+}
 </script>
 <style scoped>
 .wrapper {
@@ -160,5 +144,13 @@ form div:nth-of-type(1) {
 .button span {
 	font-size: 1.4rem;
 	font-weight: 700;
+}
+.button-close {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 </style>

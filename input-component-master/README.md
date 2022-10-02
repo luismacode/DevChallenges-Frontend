@@ -71,5 +71,5 @@ pnpm dev
 
 ## Contact
 
-- GitHub [@luismacode](https://https://github.com/luismacode)
+- GitHub [@luismacode](https://github.com/luismacode)
 - Twitter [@luismacode](https://twitter.com/Luismacode)

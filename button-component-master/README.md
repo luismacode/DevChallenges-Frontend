@@ -50,7 +50,7 @@ This application/site was created as a submission to a [DevChallenges](https://d
 Use [svn](https://subversion.apache.org/packages.html) to download the directory
 
 ```bash
-svn checkout https://github.com/luismac09/DevChallenges-Frontend/trunk/button-component-master
+svn checkout https://github.com/luismacode/DevChallenges-Frontend/trunk/button-component-master
 ```
 
 Finished download ,use [pnpm](https://pnpm.io/installation) an efficient package manager .Then install [nodejs](https://pnpm.io/cli/env) with pnpm.
@@ -71,5 +71,5 @@ pnpm dev
 
 ## Contact
 
-- GitHub [@luismac09](https://https://github.com/luismac09)
-- Twitter [@luismac09](https://twitter.com/Luismac09)
+- GitHub [@luismacode](https://github.com/luismacode)
+- Twitter [@luismacode](https://twitter.com/Luismacode)
